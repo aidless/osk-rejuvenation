@@ -1,0 +1,163 @@
+{
+  "schema": 2,
+  "project": {
+    "id": "osk-rejuvenation",
+    "title": "表观遗传部分重编程（OSK / ER-100）人体返老还童的可证伪验证",
+    "domain": "longevity / epigenetic-reprogramming",
+    "created": "2026-11-23T22:16:40Z",
+    "status": "active",
+    "parent_decision": "从三条真永生路线（A生物修复/B全脑仿真/C渐进替换）中选定路线A1：OSK重编程，理由=唯一近期(2-3年)可给出可证伪读数的路线，信息增益÷等待时间最高。见 literature/evidence-base.md 与 README.md。"
+  },
+  "question": {
+    "text": "OSK（Oct4/Sox2/Klf4，去致瘤 c-Myc）瞬时表达的部分表观遗传重编程，能否在人体中让「视野功能改善」与「细胞生物学年轻化」同时对上，且在随机对照下非安慰剂、随访中不回退、无致瘤/去分化安全信号？",
+    "updatedAt": "2026-11-23T22:16:40Z"
+  },
+  "hypotheses": [
+    {
+      "id": "H1",
+      "text": "疗效信号为真：扩大样本后在随机对照下出现统计学显著的视野改善，且疗效持续（非 8 周波动）。",
+      "status": "testing",
+      "experiments": ["E01"],
+      "reviews": [],
+      "updatedAt": "2026-11-23T22:16:40Z"
+    },
+    {
+      "id": "H2",
+      "text": "细胞确实年轻化：视野改善伴随独立的细胞水平证据——表观遗传年龄下降 +  retinal ganglion cell 功能/存活指标改善，即功能与生物学两层读数同时成立。",
+      "status": "testing",
+      "experiments": ["E02"],
+      "reviews": [],
+      "updatedAt": "2026-11-23T22:16:40Z"
+    },
+    {
+      "id": "H3",
+      "text": "安全窗口成立：部分重编程（瞬时、非整合）在人体中不产生致瘤/去分化信号；若出现则整条路线判凉。",
+      "status": "testing",
+      "experiments": ["E03"],
+      "reviews": [],
+      "updatedAt": "2026-11-23T22:16:40Z"
+    }
+  ],
+  "loop": {
+    "phase": "evidence-review",
+    "iteration": 1,
+    "history": [
+      {
+        "iteration": 0,
+        "phase": "setup",
+        "action": "decision",
+        "detail": "立项：选定 OSK/ER-100 为验证对象（路线A1），放弃 B/C（等待以几十年计且无法判定身份连续性）。verifier 与三假设已写入 verifier.md。",
+        "at": "2026-11-23T22:16:40Z"
+      },
+      {
+        "iteration": 1,
+        "phase": "evidence-review",
+        "action": "deep-dive",
+        "detail": "三路深挖（机制安全/年轻化测量学/竞争格局）落盘 mechanism-notes.md、measurement-notes.md、landscape-notes.md、deep-dive-v1.md。结论：本 Phase 1 回答不了能否返老还童（只测安全性/无疗效终点/无对照）。判据锐化三处（仅收紧）：H3 安全判定绑 5 年随访(2032-03)、H2 须≥2 个独立客观读数(≥1 结构/电生理)、H1 无外部读数可救场。立项决定不变。",
+        "at": "2026-11-24T00:16:00Z"
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "id": "E01",
+      "title": "疗效信号真伪：NCT07290244 后续读出跟踪",
+      "hypothesis": "H1",
+      "status": "planned",
+      "created": "2026-11-23T22:16:40Z",
+      "updatedAt": "2026-11-24T00:16:00Z",
+      "type": "desk-research / trial-readout-monitoring",
+      "note": "不自行做人体试验；跟踪并判定公开读出对 H1 的支持/否证。锐化：本 Phase 1 无对照，只能记探索性信号；无第二家人体读数可救场（见 verifier 锐化三）。见 experiments/E01/design.md。"
+    },
+    {
+      "id": "E02",
+      "title": "功能-生物学耦合：视野改善是否与细胞年轻化同现",
+      "hypothesis": "H2",
+      "status": "planned",
+      "created": "2026-11-23T22:16:40Z",
+      "updatedAt": "2026-11-24T00:16:00Z",
+      "type": "evidence-synthesis",
+      "note": "锐化：H2 成须≥2 个独立客观读数（DunedinPACE/因果时钟/OCT RNFL-GCIPL/pERG，≥1 结构/电生理），有对照+配对；排除单次时钟点估计/无对照视野/8周内下降/公司自述。见 verifier 锐化二与 experiments/E02/design.md。"
+    },
+    {
+      "id": "E03",
+      "title": "安全窗口：致瘤/去分化信号监测",
+      "hypothesis": "H3",
+      "status": "planned",
+      "created": "2026-11-23T22:16:40Z",
+      "updatedAt": "2026-11-24T00:16:00Z",
+      "type": "safety-signal-monitoring",
+      "note": "锐化：H3 成须绑 5 年随访(2032-03)+RGC 身份替代标志物；56 天阴性只算未观察到信号。任何致瘤/去分化信号即整条路线判凉。见 verifier 锐化一与 experiments/E03/design.md。"
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "osk-project-charter-v1",
+      "latestVersion": 1,
+      "updatedAt": "2026-11-23T22:16:40Z",
+      "description": "立项章程：决策理由 + 3 假设 + 3 实验 + 可证伪判据（verifier.md）"
+    },
+    {
+      "name": "osk-evidence-base-v1",
+      "latestVersion": 1,
+      "updatedAt": "2026-11-23T22:16:40Z",
+      "description": "前期证据档案：三条路线对比 + OSK/端粒酶关键数据与 URL + 可信度分级"
+    },
+    {
+      "name": "osk-deep-dive-v1",
+      "latestVersion": 1,
+      "updatedAt": "2026-11-24T00:16:00Z",
+      "description": "深挖综合报告：Phase 1 答不了返老还童/三处判据锐化/终判大概率=局部视神经病变疗法。四份底层档案：mechanism-notes.md(H3)、measurement-notes.md(H2)、landscape-notes.md(H1)、deep-dive-v1.md。"
+    }
+  ],
+  "reviews": [],
+  "milestones": [
+    {
+      "id": "M0",
+      "name": "立项与判据冻结",
+      "status": "done",
+      "at": "2026-11-23T22:16:40Z",
+      "exit": "research-manifest.json + verifier.md + evidence-base.md 落盘，判据在看到后续数据前冻结"
+    },
+    {
+      "id": "M1",
+      "name": "首批3人读数复核（基线）",
+      "status": "done",
+      "at": "2026-11-23T22:16:40Z",
+      "exit": "2026-10-08 首批3人：耐受8周/2人视野改善/无对照/最低剂量/未证细胞年轻化 → 官方定性 early signal，不触发任一判据"
+    },
+    {
+      "id": "M1b",
+      "name": "注册信息一手核验 + 判据修订",
+      "status": "done",
+      "at": "2026-11-23T23:53:00Z",
+      "exit": "ClinicalTrials.gov API v2 核验 NCT07290244：非随机/无盲法/单臂序贯，眼科指标全部为 Safety 终点无疗效终点 → verifier 修订：本 Phase 1 只判 H3 安全性，H1/H2 降级为探索性信号"
+    },
+    {
+      "id": "M1c",
+      "name": "三路深挖 + 判据锐化",
+      "status": "done",
+      "at": "2026-11-24T00:16:00Z",
+      "exit": "派 scout-mechanism/measurement/landscape 三路深挖，落盘四份档案。判据锐化三处（仅收紧）：H3 绑 5 年随访(2032-03)+RGC 身份标志物；H2 须≥2 独立客观读数(≥1 结构/电生理)；H1 无外部读数可救场(仅 ER-100 一家在人体)。终判大概率=局部视神经病变疗法有价值、全身返老还童远未证明。立项决定不变。"
+    },
+    {
+      "id": "M2",
+      "name": "扩展队列 / 随机对照读出",
+      "status": "pending",
+      "exit": "出现随机对照数据 → 判定 H1：对照组同样改善=凉，显著优于对照且持续=成（锐化三：无外部救场）"
+    },
+    {
+      "id": "M3",
+      "name": "细胞水平生物学读数",
+      "status": "pending",
+      "exit": "出现表观遗传年龄/细胞功能指标 → 判定 H2：锐化二 ≥2 独立读数(≥1 结构/电生理)且同现=成，缺失或不同步=证据不足"
+    },
+    {
+      "id": "M4",
+      "name": "安全性读出与终判（5 年随访）",
+      "status": "pending",
+      "exit": "汇总致瘤/去分化信号（须 5 年窗口 2032-03）→ 判定 H3 并给出整条路线 成/凉/存疑 终判；短期阴性不算安全（锐化一）"
+    }
+  ],
+  "updatedAt": "2026-11-24T00:16:00Z"
+}

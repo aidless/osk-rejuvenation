@@ -1,0 +1,26 @@
+# OSK 项目 .gitignore
+
+# 原始数据不入库（用 data-inventory 登记，保持只读引用）
+data/
+
+# 大结果文件
+*.h5
+*.hdf5
+*.bam
+*.fastq
+*.zst
+*.zstd
+*.parquet
+*.npz
+*.pkl
+artifacts/**/results/
+
+# 临时/lock
+*.tmp
+*.swp
+*.lock
+__pycache__/
+*.pyc
+
+# 备份
+*.bak-*
